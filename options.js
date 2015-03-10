@@ -101,22 +101,10 @@ for(var key in durationEls) {
   durationEls[key].onfocus = formAltered;
 }
 
-function setInputDisabled(state) {
-  siteListEl.disabled = state;
-  whitelistEl.disabled = state;
-  for(var key in durationEls) {
-    durationEls[key].disabled = state;
-  }
-}
-
 startCallbacks.work = function () {
-  document.body.className = 'work';
-  setInputDisabled(true);
 }
 
 startCallbacks.break = function () {
-  document.body.removeAttribute('class');
-  setInputDisabled(false);
 }
 
 if(background.mainPomodoro.mostRecentMode == 'work') {
